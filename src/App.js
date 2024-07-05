@@ -14,7 +14,7 @@ function App() {
         })
       }, 1000)
   }
-  return <button id="otpButton" onClick={handleClick}>{timer ===5 ? 'Send Otp': timer}</button>;
+  return <button id="otpButton"  disabled = {timer !=5} onClick={handleClick}>{timer ===5 ? <span>'Send Otp'</span> : <>{timer}</>}</button>;
 }
 
 export default App;
